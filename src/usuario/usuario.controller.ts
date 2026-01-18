@@ -15,6 +15,7 @@ export class UsuarioController {
         usuarioEntity.email = dadosDoUsuario.email;
         usuarioEntity.senha = dadosDoUsuario.senha;
         usuarioEntity.nome = dadosDoUsuario.nome;
+        usuarioEntity.cpf = dadosDoUsuario.cpf;
         usuarioEntity.id = uuid();
         
         this.usuarioRepository.salvar(usuarioEntity);

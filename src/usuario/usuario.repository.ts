@@ -21,4 +21,12 @@ export class UsuarioRepository {
         
         return possivelUsuario !== undefined;
     }
+    
+    async existeComCpf(cpf: string) {
+        const possivelUsuario = this.usuarios.find(
+            usuario => usuario.cpf === cpf
+        );
+        
+        return possivelUsuario !== undefined;
+    }
 }
