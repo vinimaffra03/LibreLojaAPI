@@ -7,11 +7,18 @@ export class UsuarioRepository {
     
     async salvar(usuario: any) {
         this.usuarios.push(usuario);
-        console.log(this.usuarios);
     }
     
     async listar() {
         return this.usuarios;
     }
     
+    
+    async existeComEmail(email: string) {
+        const possivelUsuario = this.usuarios.find(
+            usuario => usuario.email === email
+        );
+        
+        return possivelUsuario !== undefined;
+    }
 }
